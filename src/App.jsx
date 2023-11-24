@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <p>This site currently under construction... And we'll be up soon </p>
+      <p>This site currently under construction... And we'll be up soon! </p>
     </>
   )
 }
