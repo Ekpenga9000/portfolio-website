@@ -1,9 +1,12 @@
 import './App.scss'
+import NavBar from './components/navbar/NavBar'
 
 function App() {
   return (
     <section className='app'>
-      <p>It is time to work now!! </p>
+      <div className='app__nav'>
+        <NavBar/>
+      </div>
     </section>
   )
 }

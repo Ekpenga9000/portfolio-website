@@ -1,3 +1,6 @@
+@use "./style/partials/typography" as *;
+@use "./style/partials/typography2" as *;
+
 *, *::before, *::after{
     box-sizing: border-box;
 }
