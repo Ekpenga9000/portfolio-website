@@ -26,7 +26,6 @@ const About = () => {
                     <SiPostgresql />
                     <FaGitAlt />
                     <SiPostman />
-
                     </div>
                 </div>
                 <div className="about__img-div">
