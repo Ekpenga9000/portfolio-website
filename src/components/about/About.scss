@@ -11,11 +11,12 @@
     &__container{
         display: flex;
         flex-direction: column;
+        gap: 2rem;
         @include tablet{
             flex-direction: row-reverse;
             justify-content: center;
+            align-items: center;
             gap: 1.5rem;
-            // align-items: center;
         }
     }
     &__intro{
@@ -26,7 +27,39 @@
         @include tablet{
             text-align: start;
             width: 50%;
+            font-size: 1.05rem;
+        }
+        @include desktop{
             font-size: 1.2rem;
+        }
+    }
+    &__link-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        @include tablet{
+            justify-content: start;
+        }
+    }
+    &__link{
+        text-decoration: none;
+        color: $text-primary;
+        font-size: 1.5rem;
+    }
+    &__icons-div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        font-size: 1.7rem;
+        text-align: center;
+        width: 100%;
+        @include tablet{
+            text-align: start;
+            justify-content: start;
+            gap: 1rem;
         }
     }
     &__img-div{
@@ -41,4 +74,5 @@
         width: 100%;
         object-fit: cover;
     }
+
 }

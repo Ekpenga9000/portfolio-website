@@ -5,9 +5,12 @@
 *, *::before, *::after{
     box-sizing: border-box;
 }
+
+
 body{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 .app{
     min-height: 100vh;
@@ -16,13 +19,23 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    scroll-snap-type: y mandatory;
     padding: 1rem;
     &__container{
+        position: relative;
         @include tablet{
             width: $tablet-breakpoint;
         }
         @include desktop{
             width: $desktop-breakpoint;
         }
+    }
+    &__nav{
+        position: sticky;
+        top: 0;
+        background-color: rgba($color: #000000, $alpha: 0.85);
+    }
+    &__section{
+        scroll-snap-align: start;
     }
 }

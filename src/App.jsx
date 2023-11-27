@@ -10,10 +10,10 @@ function App() {
         <div className='app__nav'>
           <NavBar />
         </div>
-        <div>
+        <div className="app__section">
           <Hero />
         </div>
-        <div>
+        <div className="app__section">
           <About />
         </div>
       </div>
