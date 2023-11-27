@@ -1,18 +1,12 @@
 import "./Hero.scss";
-import dev from "../../assets/images/Louis.jpg"
 
-const Hero = () =>{
-    return(
+
+const Hero = () => {
+    return (
         <section className="hero">
-            <div className="hero__container">
-            <div className="hero__intro">
-                <h1 className="hero__title">Hi 👋🏽, My name is Omogbare Louis Ekpenga. </h1>
-                <p className="hero__text">I'm a software developer 👨🏾‍💻 based in 📍Alberta.</p>
-            </div>
-            <div className="hero__img-div">
-                <img src={dev} alt="Omogbare Louis Ekpenga" className="hero__img"/>
-            </div>
-            </div>
+            <h2 className="hero__title">Hey there 👋🏽, Fellow human or code voyager!</h2>
+            <p className="hero__text">I&#39;m Omogbare, your friendly neighborhood full-stack wizard and code enthusiast 👨🏾‍💻✨ with my lair in 📍Alberta.</p>
+            <span className="hero__icon">🚀</span>
         </section>
     )
 }

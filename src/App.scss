@@ -1,5 +1,6 @@
 @use "./style/partials/typography" as *;
-@use "./style/partials/typography2" as *;
+@use "./style/partials/variables" as *;
+@use "./style/partials/mixins" as *;
 
 *, *::before, *::after{
     box-sizing: border-box;
@@ -10,5 +11,18 @@ body{
 }
 .app{
     min-height: 100vh;
+    width: 100%;
     background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container{
+        padding-inline: 1rem;
+        @include tablet{
+            width: $tablet-breakpoint;
+        }
+        @include desktop{
+            width: $desktop-breakpoint;
+        }
+    }
 }
