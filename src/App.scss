@@ -40,4 +40,13 @@ body{
     &__section{
         scroll-snap-align: start;
     }
+    &__project{
+        position: sticky;
+        top: 4.9rem;
+        text-align: center;
+        font-family: "Montserrat", sans-serif;
+        color: $text-primary;
+        padding-block: 1.2rem;
+        background-color: rgba($color: #000000, $alpha: 0.85);
+    }
 }

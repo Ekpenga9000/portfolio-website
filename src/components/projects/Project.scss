@@ -46,6 +46,11 @@
             width: 50%;
         }
     }
+    &__text{
+        @include tablet{
+            font-size: 0.9rem;
+        }
+    }
     &__link-div{
         display: flex;
         flex-wrap: wrap;
