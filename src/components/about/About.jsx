@@ -18,14 +18,14 @@ const About = () => {
                         <a href="https://github.com/Ekpenga9000" target="blank" className="about__link"><FaGithub /></a>
                     </div>
                     <div className="about__icons-div">
-                    <FaSass />
-                    <FaReact />
-                    <FaNode />
-                    <SiExpress />
-                    <SiMysql />
-                    <SiPostgresql />
-                    <FaGitAlt />
-                    <SiPostman />
+                        <FaSass />
+                        <FaReact />
+                        <FaNode />
+                        <SiExpress />
+                        <SiMysql />
+                        <SiPostgresql />
+                        <FaGitAlt />
+                        <SiPostman />
                     </div>
                 </div>
                 <div className="about__img-div">

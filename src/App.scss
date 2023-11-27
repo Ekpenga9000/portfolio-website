@@ -10,6 +10,7 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: #000;
     scroll-behavior: smooth;
 }
 .app{
@@ -21,6 +22,7 @@ body{
     align-items: center;
     scroll-snap-type: y mandatory;
     padding: 1rem;
+    scroll-behavior: smooth;
     &__container{
         position: relative;
         @include tablet{
