@@ -46,6 +46,10 @@
         text-decoration: none;
         color: $text-primary;
         font-size: 1.5rem;
+        &--linkedIn{
+            @extend .about__link;
+            color: #004471;
+        }
     }
     &__icons-div{
         display: flex;

@@ -14,7 +14,7 @@ const About = () => {
                         I thrive on building seamless web experiences. Sass, React, Node.js, Express, MySQL – you name it, I&#39;ve conjured with it!
                     </p>
                     <div className="about__link-div">
-                        <a href="https://www.linkedin.com/in/omogbareekpenga/" target="blank" className="about__link"><FaLinkedin /></a>
+                        <a href="https://www.linkedin.com/in/omogbareekpenga/" target="blank" className="about__link--linkedIn"><FaLinkedin /></a>
                         <a href="https://github.com/Ekpenga9000" target="blank" className="about__link"><FaGithub /></a>
                     </div>
                     <div className="about__icons-div">
