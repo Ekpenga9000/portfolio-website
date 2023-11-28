@@ -1,0 +1,14 @@
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
+@use "../../style/partials/typography" as *;
+
+.footer{
+    @include tablet{
+        height: 100vh;
+    }
+    &__title{
+        font-family: "Montserrat", sans-serif;
+        color: $text-primary;
+        text-align: center;
+    }
+}

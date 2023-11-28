@@ -26,6 +26,7 @@
         align-items: center;
         flex-direction: column;
         gap: 1.5rem;
+        margin-bottom: 1rem;
         @include tablet{
             flex-direction: row;
             gap: 1rem;
@@ -33,7 +34,9 @@
         
         &--reverse{
             @extend .project__intro-div;
-            flex-direction: row-reverse;
+            @include tablet{
+                flex-direction: row-reverse;
+            }
         }
     }
 
