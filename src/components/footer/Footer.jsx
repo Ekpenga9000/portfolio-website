@@ -18,7 +18,7 @@ const Footer = () => {
                     <BiLogoGmail />
                     </a>
                 </div>
-                <p className="footer__copyright">&copy; 2023 Omogbare Louis Ekpenga. All rights reserved.</p>
+                <p className="footer__copyright">Omogbare Louis Ekpenga &copy; 2023. All rights reserved.</p>
             </div>
         </footer>
     )
