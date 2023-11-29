@@ -18,6 +18,9 @@
         font-size: 2rem;
         text-decoration: none;
         color: $text-primary;
+        &:hover{
+            color: $text-secondary;
+        }
     }
     &__copyright{
         font-family: "Montserrat", sans-serif;
