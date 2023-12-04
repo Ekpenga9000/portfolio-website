@@ -5,6 +5,7 @@ import Hero from './components/hero/Hero';
 import NavBar from './components/navbar/NavBar';
 import Project from './components/projects/Project';
 import kubi from "./assets/images/kubi-screenshot.png";
+import haadu from "./assets/images/haadu.png";
 
 function App() {
   return (
@@ -36,6 +37,16 @@ function App() {
             link={"https://kubi-software.netlify.app/login"}
             src={kubi}
             alt={"Login page for kubi software"}
+          />
+        </div>
+        <div className="app__section">
+          <Project title={"Haadu: An Agro based e-commerce website!"}
+            text={"Welcome to Haadu, your digital gateway to the farm-fresh universe! 🌾 Say goodbye to middlemen and hello to direct connections with our amazing farmers. It's not just shopping; it's a celebration of flavors and a festival of colors, bringing the farm to your doorstep. Join us for a green-thumb handshake and let the agro-fiesta begin at Haadu – where freshness meets fun! 🚜🍓"}
+            repo={"https://github.com/Ekpenga9000/haadu"}
+            isReverse={false}
+            src={haadu}
+            alt={"Haadu marketplace"}
+            set2={true}
           />
         </div>
         <div className='app__section'>

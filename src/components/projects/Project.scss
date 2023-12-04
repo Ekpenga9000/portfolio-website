@@ -89,7 +89,6 @@
         }
     }
     &__img-div{
-        border: 1px solid red;
         height: 50vh;
         width: 100%;
         @include tablet{
@@ -97,6 +96,7 @@
         }
     }
     &__img{
+        border-radius:0.625rem;
         height:100%;
         width: 100%;
         object-fit: cover;

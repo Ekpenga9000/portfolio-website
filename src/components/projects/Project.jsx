@@ -1,8 +1,8 @@
 import "./Project.scss";
-import { FaGithub, FaSass, FaReact, FaNode, FaGitAlt } from "react-icons/fa";
-import { SiExpress, SiMysql, SiPostman } from "react-icons/si";
+import { FaGithub,FaHtml5, FaPython, FaSass,FaCss3Alt, FaReact, FaNode, FaGitAlt,FaBootstrap } from "react-icons/fa";
+import { SiExpress,SiJquery, SiMysql, SiPostman,SiFlask } from "react-icons/si";
 
-const Project = ({isReverse, text, title, link, frontend, backend, src, alt}) => {
+const Project = ({isReverse, text, title, link, frontend, backend, src, alt, repo, set2}) => {
     
     return (
         <section className="project">
@@ -19,10 +19,11 @@ const Project = ({isReverse, text, title, link, frontend, backend, src, alt}) =>
                        {link &&
                         <a href={link} target="blank" className="project__link"><FaGithub /> Visit Site</a> }
                         
-                            <a href={frontend} target="blank" className="project__link"><FaGithub /> View Frontend Repo</a>
-                            <a href={backend} target="blank" className="project__link"><FaGithub /> View Backend Repo</a>
+                           { frontend && <a href={frontend} target="blank" className="project__link"><FaGithub /> View Frontend Repo</a>}
+                            {backend && <a href={backend} target="blank" className="project__link"><FaGithub /> View Backend Repo</a>}
+                            {repo && <a href={repo} target="blank" className="project__link"><FaGithub /> View Repo</a>}
                         </div>
-                        <div className="project__icons-div">
+                        {!set2 && <div className="project__icons-div">
                             <FaSass />
                             <FaReact />
                             <FaNode />
@@ -30,7 +31,17 @@ const Project = ({isReverse, text, title, link, frontend, backend, src, alt}) =>
                             <SiMysql />
                             <FaGitAlt />
                             <SiPostman />
-                        </div>
+                        </div>}
+                        {set2 && <div className="project__icons-div">
+                            <FaHtml5 />
+                            <FaCss3Alt />
+                            <FaBootstrap />
+                            <SiJquery />
+                            <FaPython />
+                            <SiFlask />
+                            <SiMysql />
+                            <FaGitAlt />
+                        </div>}
                     </div>
                     {src && <div className="project__img-div">
                         <img src={src} alt={alt} className="project__img" />
