@@ -1,9 +1,8 @@
 import "./Project.scss";
-// import dev from "../../assets/images/Louis.jpg";
 import { FaGithub, FaSass, FaReact, FaNode, FaGitAlt } from "react-icons/fa";
 import { SiExpress, SiMysql, SiPostman } from "react-icons/si";
 
-const Project = ({isReverse, text, title, link, frontend, backend}) => {
+const Project = ({isReverse, text, title, link, frontend, backend, src, alt}) => {
     
     return (
         <section className="project">
@@ -33,9 +32,12 @@ const Project = ({isReverse, text, title, link, frontend, backend}) => {
                             <SiPostman />
                         </div>
                     </div>
-                    <div className="project__img-div">
+                    {src && <div className="project__img-div">
+                        <img src={src} alt={alt} className="project__img" />
+                    </div>}
+                    {!src && <div className="project__img-div">
                         {/* <img src={dev} alt="Omogbare Louis Ekpenga" className="project__img" /> */}
-                    </div>
+                    </div>}
                 </div>
             </div>
         </section>

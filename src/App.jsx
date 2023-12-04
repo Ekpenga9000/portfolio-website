@@ -4,6 +4,7 @@ import Footer from './components/footer/Footer';
 import Hero from './components/hero/Hero';
 import NavBar from './components/navbar/NavBar';
 import Project from './components/projects/Project';
+import kubi from "./assets/images/kubi-screenshot.png";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
             backend={"https://github.com/Ekpenga9000/kubi-api"}
             isReverse={true}
             link={"https://kubi-software.netlify.app/login"}
+            src={kubi}
+            alt={"Login page for kubi software"}
           />
         </div>
         <div className='app__section'>
