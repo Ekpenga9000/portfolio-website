@@ -6,6 +6,8 @@ import NavBar from './components/navbar/NavBar';
 import Project from './components/projects/Project';
 import kubi from "./assets/images/kubi-screenshot.png";
 import haadu from "./assets/images/haadu.png";
+import poster from "./assets/images/alt-logo.png";
+import video from "./assets/video/qlique-qlick.mp4";
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
             text={" Embark on a refreshing social journey with my capstone creation, Qlique-Qlick! Tired of algorithmic chaos and mindless scrolling? Qlique-Qlick is your digital sanctuary, offering a customer-centric, distraction-free haven. This minimalist social media app is tailored for genuine connections, stripping away the noise to let your unique voice shine. Navigate effortlessly through a seamless, intuitive interface, and reclaim the joy of sharing with those who matter most. Join the Qlique-Qlick movement — because your social experience should reflect you, not an algorithm. 🚀✨"}
             frontend={"https://github.com/Ekpenga9000/qlick-qlique-client/"}
             backend={"https://github.com/Ekpenga9000/qlick-qlique-api"}
-            video={true}
+            video={video}
+            poster={poster}
           />
         </div>
         <div className="app__section">
