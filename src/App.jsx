@@ -26,6 +26,7 @@ function App() {
             text={" Embark on a refreshing social journey with my capstone creation, Qlique-Qlick! Tired of algorithmic chaos and mindless scrolling? Qlique-Qlick is your digital sanctuary, offering a customer-centric, distraction-free haven. This minimalist social media app is tailored for genuine connections, stripping away the noise to let your unique voice shine. Navigate effortlessly through a seamless, intuitive interface, and reclaim the joy of sharing with those who matter most. Join the Qlique-Qlick movement — because your social experience should reflect you, not an algorithm. 🚀✨"}
             frontend={"https://github.com/Ekpenga9000/qlick-qlique-client/"}
             backend={"https://github.com/Ekpenga9000/qlick-qlique-api"}
+            video={true}
           />
         </div>
         <div className="app__section">

@@ -1,8 +1,9 @@
 import "./Project.scss";
 import { FaGithub,FaHtml5, FaPython, FaSass,FaCss3Alt, FaReact, FaNode, FaGitAlt,FaBootstrap } from "react-icons/fa";
 import { SiExpress,SiJquery, SiMysql, SiPostman,SiFlask } from "react-icons/si";
-
-const Project = ({isReverse, text, title, link, frontend, backend, src, alt, repo, set2}) => {
+import poster from "../../assets/images/alt-logo.png";
+import videos from "../../assets/video/qlique-qlick.mp4";
+const Project = ({isReverse, text, title, link, frontend, backend, src, alt, repo, set2, video}) => {
     
     return (
         <section className="project">
@@ -43,11 +44,13 @@ const Project = ({isReverse, text, title, link, frontend, backend, src, alt, rep
                             <FaGitAlt />
                         </div>}
                     </div>
-                    {src && <div className="project__img-div">
+                    {!video && <div className="project__img-div">
                         <img src={src} alt={alt} className="project__img" />
                     </div>}
-                    {!src && <div className="project__img-div">
-                        {/* <img src={dev} alt="Omogbare Louis Ekpenga" className="project__img" /> */}
+                    {video && <div className="project__img-div">
+                        <video poster={poster} controls="controls" className="project__img">
+                            <source src={videos} type="video/mp4"/>
+                        </video>
                     </div>}
                 </div>
             </div>
