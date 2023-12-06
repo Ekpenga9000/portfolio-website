@@ -46,8 +46,10 @@ const NavBar = ({
             My Projects
           </a>
         </li>
-        <li className="nav__item" onClick={handleContact}>
-          Contact me
+        <li className="nav__item">
+        <a href="#footer" className="nav__item">
+              Contact me
+            </a>
         </li>
         {isResume && (
           <li
@@ -83,10 +85,8 @@ const NavBar = ({
               My Projects
             </a>
           </li>
-          <li className="nav__item">
-            <a href="#footer" className="nav__item">
+          <li className="nav__item" onClick={handleContact}>
               Contact me
-            </a>
           </li>
           {isResume && (
             <li className="nav__item" onClick={handleToggle}>
