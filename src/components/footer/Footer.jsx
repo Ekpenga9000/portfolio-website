@@ -1,7 +1,7 @@
 import "./Footer.scss";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
-import FooterAnimation from "../footerAnimation/FooterAnimation";
+import Animation from "../animation/Animation";
 
 const Footer = () => {
    
@@ -10,21 +10,21 @@ const Footer = () => {
             <div className="footer__container">
                 <div className="footer__icons-div">
 
-                    <FooterAnimation>
+                    <Animation>
                         <a href="https://github.com/Ekpenga9000" className="footer__icon">
                             <FaGithub />
                         </a>
-                    </FooterAnimation>
-                    <FooterAnimation>
+                    </Animation>
+                    <Animation>
                         <a href="https://www.linkedin.com/in/omogbareekpenga/" className="footer__icon">
                             <FaLinkedin />
                         </a>
-                    </FooterAnimation>
-                    <FooterAnimation>
+                    </Animation>
+                    <Animation>
                         <a href="mailto:ekpenga9000@gmail.com" className="footer__icon">
                             <BiLogoGmail />
                         </a>
-                    </FooterAnimation>
+                    </Animation>
                 </div>
                 <p className="footer__copyright">Omogbare Louis Ekpenga &copy; 2023. All rights reserved.</p>
             </div>

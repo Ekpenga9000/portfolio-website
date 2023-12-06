@@ -1,7 +1,7 @@
 import {motion} from "framer-motion";
 import { useRef, useState } from "react";
 
-const FooterAnimation = ({children}) =>{
+const Animation = ({children}) =>{
 
     const ref = useRef(null); 
     const [position, setPosition] = useState({x:0, y:0});
@@ -35,4 +35,4 @@ const FooterAnimation = ({children}) =>{
     )
 }
 
-export default FooterAnimation; 
+export default Animation; 

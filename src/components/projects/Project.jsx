@@ -1,5 +1,5 @@
 import "./Project.scss";
-import { FaGithub,FaHtml5, FaPython, FaSass,FaCss3Alt, FaReact, FaNode, FaGitAlt,FaBootstrap } from "react-icons/fa";
+import { FaGithub,FaHtml5, FaPython, FaSass,FaCss3Alt, FaReact, FaNode, FaGitAlt,FaBootstrap, FaExternalLinkAlt } from "react-icons/fa";
 import { SiExpress,SiJquery, SiMysql, SiPostman,SiFlask } from "react-icons/si";
 
 const Project = ({isReverse, text, title, link, frontend, backend, src, alt, repo, set2, video, poster}) => {
@@ -17,7 +17,7 @@ const Project = ({isReverse, text, title, link, frontend, backend, src, alt, rep
                         </p>
                         <div className="project__link-div">
                        {link &&
-                        <a href={link} target="blank" className="project__link"><FaGithub /> Visit Site</a> }
+                        <a href={link} target="blank" className="project__link"><FaExternalLinkAlt /> Visit Site</a> }
                         
                            { frontend && <a href={frontend} target="blank" className="project__link"><FaGithub /> View Frontend Repo</a>}
                             {backend && <a href={backend} target="blank" className="project__link"><FaGithub /> View Backend Repo</a>}

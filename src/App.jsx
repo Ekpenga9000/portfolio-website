@@ -8,17 +8,34 @@ import kubi from "./assets/images/kubi-screenshot.png";
 import haadu from "./assets/images/haadu.png";
 import poster from "./assets/images/alt-logo.png";
 import video from "./assets/video/qlique-qlick.mp4";
+import { pdfjs } from 'react-pdf';
+import PdfComponent from "./components/pdf/PdfComponent";
+import { useState } from 'react';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  'pdfjs-dist/build/pdf.worker.min.js',
+  import.meta.url,
+).toString();
 
 function App() {
+  const [isResume, setIsResume] = useState(false);
+
+  const handleResume = () => {
+    setIsResume(!isResume);
+  }
+
   return (
     <section className='app'>
       <div className='app__container'>
         <div className='app__nav'>
-          <NavBar />
+          <NavBar handleResume={handleResume} isResume={ isResume } />
         </div>
         <div className="app__section">
-          <Hero />
+          <Hero handleResume={handleResume} isResume={ isResume } />
         </div>
+       { isResume && <div>
+          <PdfComponent handleResume={ handleResume } />
+        </div>}
         <div className="app__section">
           <About />
         </div>
