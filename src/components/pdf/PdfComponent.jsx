@@ -4,13 +4,14 @@ import resume from "../../assets/resume/Omogbare_Louis_Ekpenga_ab.pdf";
 import "./PdfComponent.scss";
 import DownloadButton from "../download/DownloadButton";
 import { IoCloseOutline } from "react-icons/io5";
-
+import file from "../../assets/resume/Omogbare_Louis_Ekpenga_ab.pdf";
 
 
 const PdfComponent = ({handleResume}) => {
   const [numPages, setNumPages] = useState();
   const [pageNumber, setPageNumber] = useState(1);
 
+  const fileName = "Omogbare_Louis_Ekpenga_Resume.pdf";
     const onDocumentLoadSuccess = ({numPages }) => {
     setNumPages(numPages);
     };
@@ -41,7 +42,7 @@ const PdfComponent = ({handleResume}) => {
               </Document>
           </div>
           <div className="pdf__btn-div">
-          <DownloadButton/>
+          <DownloadButton fileName={fileName} fileUrl={file}/>
           <button onClick={handleClick} className="pdf__btn"><IoCloseOutline />Close</button>
           </div>
     </section>

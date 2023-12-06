@@ -19,16 +19,35 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function App() {
   const [isResume, setIsResume] = useState(false);
+  const [isDropdown, setIsDropdown] = useState(false);
+  const [isContact, setIsContact] = useState(false); 
 
   const handleResume = () => {
     setIsResume(!isResume);
+  }
+
+  const handleMenuToggle = () => {
+    setIsDropdown(!isDropdown);
+    setIsContact(false);
+  };
+
+  const handleContactToggle = () => {
+    setIsContact(!isContact);
+    setIsDropdown(false);
   }
 
   return (
     <section className='app'>
       <div className='app__container'>
         <div className='app__nav'>
-          <NavBar handleResume={handleResume} isResume={ isResume } />
+          <NavBar
+            handleResume={handleResume}
+            isResume={isResume}
+            handleMenuToggle={handleMenuToggle}
+            isDropdown={isDropdown}
+            handleContactToggle={handleContactToggle}
+            isContact={isContact}
+          />
         </div>
         <div className="app__section">
           <Hero handleResume={handleResume} isResume={ isResume } />
@@ -39,7 +58,7 @@ function App() {
         <div className="app__section">
           <About />
         </div>
-        <h2 className='app__project'>My Projects</h2>
+        <h2 className='app__project' id='projects'>My Projects</h2>
         <div className="app__section">
           <Project title={"Qlique-Qlick: Social media application"}
             text={" Embark on a refreshing social journey with my capstone creation, Qlique-Qlick! Tired of algorithmic chaos and mindless scrolling? Qlique-Qlick is your digital sanctuary, offering a customer-centric, distraction-free haven. This minimalist social media app is tailored for genuine connections, stripping away the noise to let your unique voice shine. Navigate effortlessly through a seamless, intuitive interface, and reclaim the joy of sharing with those who matter most. Join the Qlique-Qlick movement — because your social experience should reflect you, not an algorithm. 🚀✨"}
@@ -70,7 +89,7 @@ function App() {
             set2={true}
           />
         </div>
-        <div className='app__section'>
+        <div className='app__section' id='footer'>
          <Footer/>
         </div>
       </div>
