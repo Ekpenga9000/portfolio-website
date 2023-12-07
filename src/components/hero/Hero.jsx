@@ -65,8 +65,8 @@ const Hero = ({handleResume, isResume}) => {
         Hey there 👋🏽, fellow human, code voyager!
       </h2>
       <p ref={textItem} className="hero__text">
-        This <span className="hero__name">Omogbare</span>, your friendly
-        neighborhood full-stack wizard and code enthusiast 👨🏾‍💻✨ reaching from my
+        I'm <span className="hero__name">Omogbare</span>, your friendly
+        neighborhood full-stack wizard and code enthusiast 👨🏾‍💻✨ reaching you from my
         TechCoven in 📍Alberta.
       </p>
         <span ref={eggItem} className="hero__icon" onClick={handleClick}>
