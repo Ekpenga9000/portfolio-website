@@ -10,7 +10,11 @@ import poster from "./assets/images/alt-logo.png";
 import video from "./assets/video/qlique-qlick.mp4";
 import { pdfjs } from 'react-pdf';
 import PdfComponent from "./components/pdf/PdfComponent";
-import { useState } from 'react';
+import { useState, useRef, useLayoutEffect } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import ProgressBar from './components/progressBar/ProgressBar';
+gsap.registerPlugin(ScrollTrigger);
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
   'pdfjs-dist/build/pdf.worker.min.js',
@@ -21,7 +25,9 @@ function App() {
   const [isResume, setIsResume] = useState(false);
   const [isDropdown, setIsDropdown] = useState(false);
   const [isContact, setIsContact] = useState(false); 
-
+  const cursorFollower = useRef(null);
+  const projectHeader = useRef(null);
+  const comp = useRef(null); 
   const handleResume = () => {
     setIsResume(!isResume);
   }
@@ -36,8 +42,32 @@ function App() {
     setIsDropdown(false);
   }
 
+  useLayoutEffect(() => {
+    document.addEventListener("mousemove", e => {
+      gsap.to(cursorFollower.current, {
+        duration: 0.8,
+        x: e.clientX,
+        y: e.clientY,
+        ease: "power2.out"
+      });
+    });
+
+    let ctx = gsap.context(() => {
+      gsap.from(projectHeader.current, {
+        duration: 1, 
+        x: -300, 
+        opacity: 0.2, 
+        scrollTrigger: projectHeader.current,
+        ease:"power2.out"
+      })
+    }, comp); 
+
+    return () => ctx.revert(); 
+
+  }, []);
+
   return (
-    <section className='app'>
+    <section className='app' ref={comp}>
       <div className='app__container'>
         <div className='app__nav'>
           <NavBar
@@ -48,6 +78,7 @@ function App() {
             handleContactToggle={handleContactToggle}
             isContact={isContact}
           />
+          <ProgressBar/>
         </div>
         <div className="app__section">
           <Hero handleResume={handleResume} isResume={ isResume } />
@@ -58,7 +89,7 @@ function App() {
         <div className="app__section">
           <About />
         </div>
-        <h2 className='app__project' id='projects'>My Projects</h2>
+        <h2 className='app__project' id='projects' ref={projectHeader}>My Projects</h2>
         <div className="app__section">
           <Project title={"Qlique-Qlick: Social media application"}
             text={" Embark on a refreshing social journey with my capstone creation, Qlique-Qlick! Tired of algorithmic chaos and mindless scrolling? Qlique-Qlick is your digital sanctuary, offering a customer-centric, distraction-free haven. This minimalist social media app is tailored for genuine connections, stripping away the noise to let your unique voice shine. Navigate effortlessly through a seamless, intuitive interface, and reclaim the joy of sharing with those who matter most. Join the Qlique-Qlick movement — because your social experience should reflect you, not an algorithm. 🚀✨"}
@@ -66,8 +97,10 @@ function App() {
             backend={"https://github.com/Ekpenga9000/qlick-qlique-api"}
             video={video}
             poster={poster}
+            isReverse={false}
           />
         </div>
+        <div className='app__cursor-follower' ref={cursorFollower}></div>
         <div className="app__section">
           <Project title={"Kubi: Your Playground for Project Management!"}
             text={"Kubi, inspired by Jira, invites you to a space where creativity reigns and collaboration knows no boundaries. No titles, no red tape—just a canvas for turning your boldest ideas into reality. With Kubi, projects become celebrations, tasks transform into adventures, and every click feels like a victory. Unleash the fun, break free from the ordinary, and let Kubi be your accomplice on the journey to project management bliss!"}

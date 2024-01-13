@@ -2,58 +2,76 @@
 @use "./style/partials/variables" as *;
 @use "./style/partials/mixins" as *;
 
-*, *::before, *::after{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    scroll-behavior: smooth;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  scroll-behavior: smooth;
 }
-.app{
-    min-height: 100vh;
-    width: 100%;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    scroll-snap-type: y mandatory;
-    padding: 1rem;
-    scroll-behavior: smooth;
-    &__container{
-        position: relative;
-        @include tablet{
-            width: $tablet-breakpoint;
-        }
-        @include desktop{
-            width: $desktop-breakpoint;
-        }
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-type: y mandatory;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  &__container {
+    position: relative;
+    @include tablet {
+      width: $tablet-breakpoint;
     }
-    &__nav{
-        position: sticky;
-        top: 0;
-        background-color: #000000;
-        z-index: 10;
+    @include desktop {
+      width: $desktop-breakpoint;
     }
-    &__section{
-        scroll-snap-align: start;
+  }
+  &__nav {
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    z-index: 10;
+  }
+  &__progress{
+    height: 0.1rem;
+    background-color: $text-secondary;
+    width: 10%;
+  }
+  &__section {
+    scroll-snap-align: start;
+  }
+  &__project {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    color: $text-primary;
+    padding-block: 1.2rem;
+    z-index: 9;
+    @include tablet {
+      position: sticky;
+      top: 3rem;
+      background-color: #000;
     }
-    &__project{
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        color: $text-primary;
-        padding-block: 1.2rem;
-        z-index: 9;
-        @include tablet{
-            position: sticky;
-            top: 3rem;
-            background-color:#000;
-        }
-        @include desktop{
-            top: 4.8rem;
-        }
+    @include desktop {
+      top: 4.8rem;
     }
+  }
+  &__cursor-follower{
+    position: fixed;
+    top: -1.25rem;
+    left: 0;
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba($color: $text-primary, $alpha: 0.1);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.2s ease;
+  }
 }

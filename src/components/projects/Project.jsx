@@ -1,13 +1,40 @@
 import "./Project.scss";
 import { FaGithub,FaHtml5, FaPython, FaSass,FaCss3Alt, FaReact, FaNode, FaGitAlt,FaBootstrap, FaExternalLinkAlt } from "react-icons/fa";
-import { SiExpress,SiJquery, SiMysql, SiPostman,SiFlask } from "react-icons/si";
+import { SiExpress, SiJquery, SiMysql, SiPostman, SiFlask } from "react-icons/si";
+import { useRef, useLayoutEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+gsap.registerPlugin(ScrollTrigger);
+
 
 const Project = ({isReverse, text, title, link, frontend, backend, src, alt, repo, set2, video, poster}) => {
-    
+    const leftSide = useRef(null); 
+    const rightSide = useRef(null);
+    const comp = useRef(null); 
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            gsap.from(leftSide.current, {
+                duration: 1.5,
+                x: -300,
+                opacity: 0,
+                scrollTrigger: leftSide.current,
+                ease:"power2.out"
+            });
+            gsap.from(rightSide.current, {
+                duration: 2,
+                x: -300,
+                opacity:0,
+                scrollTrigger: rightSide.current,
+                ease:"power2.out"
+            });
+        }, comp); 
+        return () => ctx.revert(); 
+    }, []); 
     return (
         <section className="project">
-            <div className="project__container">
-                <div className={`project__intro-div${isReverse ? "--reverse" : ""}`}>
+            <div className="project__container" ref={comp}>
+                <div className={`project__intro-div${isReverse ? "--reverse" : ""}`} ref={isReverse ? rightSide : leftSide}>
                     <div className="project__intro">
                         <h3 className="project__title">
                             {title}
@@ -43,10 +70,10 @@ const Project = ({isReverse, text, title, link, frontend, backend, src, alt, rep
                             <FaGitAlt />
                         </div>}
                     </div>
-                    {!video && <div className="project__img-div">
+                    {!video && <div className="project__img-div" ref={isReverse ? leftSide : rightSide}>
                         <img src={src} alt={alt} className="project__img" />
                     </div>}
-                    {video && <div className="project__img-div">
+                    {video && <div className="project__img-div" ref={isReverse ? leftSide : rightSide}>
                         <video poster={poster} controls="controls" className="project__img">
                             <source src={video} type="video/mp4"/>
                         </video>
