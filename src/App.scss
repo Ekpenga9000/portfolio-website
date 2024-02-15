@@ -6,15 +6,96 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 html{
   scroll-behavior: smooth;
 }
-body {
-  margin: 0;
-  padding: 0;
+
+body, 
+button, 
+input, 
+textarea{
+  font-family: "Poppins", sans-serif;
+  font-size: 400;
 }
+
+body{
+  background-color: $body-color;
+  color:$text-color;
+}
+
+h1,h2,h3{
+  color: $title-color;
+  font-weight: 500;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* REUSABLE CLASSES*/
+
+.section{
+  padding: 6rem 0 2rem; 
+  &__title{
+    color: $title-color;
+    text-align: center;
+  }
+  &__subtitle{
+    display: block;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+}
+
+.container{
+  max-width: 968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid{
+  display: grid;
+  gap: 1.5rem;
+}
+
+.button{
+  display: inline-block;
+  background-color: $title-color;
+  color: $container-color;
+  padding:1.25rem 2rem; 
+  border-radius: 1rem;
+  font-weight: 400;
+  &:hover{
+    background-color: $title-color--dark;
+  }
+  &--flex{
+    display: inline-flex;
+    align-items: center;
+  }
+  //Check for the button icon. 
+}
+
+
 .app {
   // min-height: 100vh;
   // width: 100%;

@@ -28,7 +28,7 @@ const NavBar = ({
 
   return (
     <nav className="nav">
-      <h3 className="nav__logo">Omogbare Louis Ekpenga</h3>
+      <h3 className="nav__logo">Ekpenga</h3>
       <div className="nav__btn" onClick={handleMenu}>
         {!isDropdown && !isContact && <RxHamburgerMenu />}
         {isDropdown && !isContact && <IoCloseOutline />}
