@@ -1,0 +1,105 @@
+@use "../../style/partials/variables" as *; 
+@use "../../style/partials/mixins" as *; 
+@use "../../style/partials/typography" as *; 
+
+.header{
+    padding-inline: 1rem;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    top: initial;
+    bottom: 0;
+    background-color: $body-color;
+    @include desktop{
+        top: 0;
+        left: 0;
+    }
+}
+
+.nav{
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop{
+        height: 4.5rem;
+    }
+    &__logo{
+        color: $title-color;
+        font-weight: 400;
+    }
+    &__toggle{
+        color: $title-color;
+        font-weight: 400;
+        @include desktop{
+            display: none;
+        }
+    }
+    &__close{
+        position: absolute;
+        right: 1.3rem;
+        bottom: .5rem;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: $title-color;
+        &:hover{
+            color: $title-color--dark;
+        }
+        @include desktop{
+            display: none;
+        }
+    }
+    &__link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: $title-color;
+        transition: .3s;
+        &:hover{
+            color:$title-color--dark; 
+        }
+    }
+    &__icon{
+        font-size: 1.2rem;
+        @include desktop{
+            display: none;
+        }
+    }
+    &__menu{
+        display: none;
+        @include desktop{
+            display: block;
+        }
+        &--mobile{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 0.25rem 4rem;
+            background-color: $body-color;
+            box-shadow: 0 -1px 4px rgba(0,0,0,0.15);
+            border-radius: 1.5rem 1.5rem 0 0;
+            transition: .3s;
+            @include mobile-lg{
+                padding: 2rem 1.5rem 4rem;
+            }
+            @include desktop{
+                display: none;
+            }
+        }
+    }
+    &__list{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include mobile-lg{
+            gap: 2rem;
+        }
+        @include desktop{
+            display: flex;
+            column-gap: 2rem;
+        }
+    }
+}
