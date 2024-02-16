@@ -28,6 +28,11 @@ const Home = () => {
                   <i className="uil uil-message main__send"></i>
                   </a>
               </div>
+              <div className="main__scroll-div">
+                  <i className='bx bx-mouse bx-fade-down main__scroll-icon'></i> 
+                  <p>Scroll down</p>  
+                  <i className='bx bx-chevrons-down bx-fade-down main__scroll-icon' ></i>
+              </div>
           </section>
     </main>
   )
