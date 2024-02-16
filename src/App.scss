@@ -46,11 +46,6 @@ button{
   outline: none;
 }
 
-img{
-  max-width: 100%;
-  height: auto;
-}
-
 
 /* REUSABLE CLASSES*/
 
@@ -68,7 +63,7 @@ img{
 }
 
 .container{
-  max-width: 968px;
+  max-width: 60.5rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -96,17 +91,17 @@ img{
 }
 
 
-.app {
-  &__cursor-follower{
-    position: fixed;
-    top: -1.25rem;
-    left: 0;
-    width: 5rem;
-    height: 5rem;
-    background-color: rgba($color: $text-primary, $alpha: 0.1);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: all 0.2s ease;
-  }
-}
+// .app {
+//   &__cursor-follower{
+//     position: fixed;
+//     top: -1.25rem;
+//     left: 0;
+//     width: 5rem;
+//     height: 5rem;
+//     background-color: rgba($color: $text-primary, $alpha: 0.1);
+//     border-radius: 50%;
+//     pointer-events: none;
+//     z-index: 9999;
+//     transition: all 0.2s ease;
+//   }
+// }
