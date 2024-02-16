@@ -4,7 +4,7 @@ import louis from "../../assets/images/Louis.jpg";
 
 const Home = () => {
   return (
-      <main className='main'>
+      <main className='main' id='home'>
           <section className='main__container container'>
               <div className='main__socials'>
                   <a href="mailto:ekpenga9000@gmail.com" className='main__link'>
