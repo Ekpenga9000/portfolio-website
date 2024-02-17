@@ -1,84 +1,66 @@
-@use "../../style/partials/mixins" as *; 
+@use "../../style/partials/mixins" as *;
 @use "../../style/partials/typography" as *;
 @use "../../style/partials/variables" as *;
-.about{
-    @include tablet{
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    &__container{
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        @include tablet{
-            flex-direction: row-reverse;
-            justify-content: center;
-            align-items: center;
-            gap: 1.5rem;
-        }
-    }
-    &__intro{
-        color: $text-primary;
-        font-family: "Montserrat", sans-serif;
-        font-weight: 100;
-        text-align: center;
-        @include tablet{
-            text-align: start;
-            width: 50%;
-            font-size: 1.05rem;
-        }
-        @include desktop{
-            font-size: 1.2rem;
-        }
-    }
-    &__link-div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        @include tablet{
-            justify-content: start;
-        }
-    }
-    &__link{
-        text-decoration: none;
-        color: $text-primary;
-        font-size: 1.5rem;
-        &--linkedIn{
-            @extend .about__link;
-            color: #004471;
-        }
-    }
-    &__icons-div{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        margin-top: 1rem;
-        font-size: 1.7rem;
-        text-align: center;
-        width: 100%;
-        @include tablet{
-            text-align: start;
-            justify-content: start;
-            gap: 1rem;
-        }
-    }
-    &__img-div{
-        height: 50vh;
-        width: 100%;
-        border-radius: 10px;
-        @include tablet{
-            width: 40%;
-        }
-    }
-    &__img{
-        height: 100%;
-        width: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-    }
 
+.about {
+  width: 100%;
+  padding-inline: 1rem;
+  background-color: $body-color;
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    font-size: 1.5rem;
+    text-align: center;
+    @include tablet{
+        margin-bottom: 2.5rem;
+    }
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    @include mobile-lg{
+        width: 80%;
+    }
+    @include tablet{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: start;
+    }
+  }
+  &__img-div {
+    height: 13.75rem;
+    width: 13.75rem;
+    @include mobile-lg{
+        height: 15.625rem;
+        width: 15.625rem;
+    }
+    @include tablet{
+      height: 18.75rem;
+      width: 18.75rem;
+    }
+  }
+  &__img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+  }
+  &__content{
+    @include tablet{
+        width: 50%;
+    }
+  }
+  &__card-list {
+    display: flex;
+    justify-content: space-between;
+  }
 }

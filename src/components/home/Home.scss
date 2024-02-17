@@ -15,12 +15,12 @@
     align-items: center;
     text-align: center;
     gap: 1rem;
+    justify-content: center;
     @include tablet {
       margin-top: 2rem;
-      justify-content: center;
     }
     @include desktop {
-        justify-content: start;
+      justify-content: start;
       margin-top: 1rem;
       text-align: left;
       flex-wrap: nowrap;
@@ -43,13 +43,25 @@
     }
   }
   &__content {
+    @include mobile-lg{
+        width: 80%;
+    }
+    @include tablet{
+        width: 60%;
+    }
     @include desktop {
       width: 50%;
     }
   }
   &__h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: 600;
+    @include tablet {
+      font-size: 2rem;
+    }
+    @include desktop {
+      font-size: 2.5rem;
+    }
   }
   &__h3 {
     margin-bottom: 1rem;
@@ -64,15 +76,22 @@
     }
   }
   &__img-div {
-    width: 80%;
-    @include desktop {
-        height: 18.75rem;
-        width: 18.75rem;
-        order: 1;
+    height: 13.75rem;
+    width: 13.75rem;
+    @include mobile-lg {
+      height: 15.625rem;
+      width: 15.625rem;
     }
-}
+    @include tablet {
+      height: 18.75rem;
+      width: 18.75rem;
+    }
+    @include desktop {
+      order: 1;
+    }
+  }
 
-&__img {
+  &__img {
     height: 100%;
     width: 100%;
     animation: pic__animate 8s ease-in-out infinite 1s;
@@ -103,27 +122,31 @@
   }
 
   &__scroll-div {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
+    display: none;
     @include desktop {
+      display: block;
+      text-align: center;
+      width: 100%;
       position: absolute;
-      bottom: 6rem;
-      right: 50%;
+      bottom: 5rem;
     }
+  }
+
+  &__anchor {
+    color: $text-color;
   }
 }
 
-@keyframes pic__animate{
-    0%{
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
-
-    50%{
-        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
-    }
-
-    100%{
-        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    }
+@keyframes pic__animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   }
+
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}

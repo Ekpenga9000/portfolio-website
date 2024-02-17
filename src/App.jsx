@@ -6,6 +6,7 @@ import gsap from "gsap";
 // import ProgressBar from './components/progressBar/ProgressBar';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
+import About from './components/about/About';
 gsap.registerPlugin(ScrollTrigger);
 
 // pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -45,7 +46,8 @@ function App() {
   return (
     <>
       <Header />
-      <Home/>
+      <Home />
+      <About/>
     </>
   )
 }
