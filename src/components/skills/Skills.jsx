@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import "./Skills.scss";
 import {
   SiGreensock,
@@ -23,27 +23,11 @@ import { FaGithub } from "react-icons/fa6";
 import { BsLayoutTextWindowReverse } from "react-icons/bs";
 
 const Skills = () => {
-  const [isFrontend, setIsFrontend] = useState(true);
-  const [isBackend, setIsBackend] = useState(false);
-  const [isSupport, setIsSupport] = useState(false);
+    const [activeTab, setActiveTab] = useState("frontend"); 
 
-  const toggleSkills = (param) => {
-    if (param === "1") {
-      setIsFrontend(true);
-      setIsBackend(false);
-      setIsSupport(false);
-    }
-    if (param === "2") {
-      setIsBackend(true);
-      setIsSupport(false);
-      setIsFrontend(false);
-    }
-    if (param === "3") {
-      setIsSupport(true);
-      setIsBackend(false);
-      setIsFrontend(false);
-    }
-  };
+    const toggleSkills = useCallback((param) => {
+        setActiveTab(param);
+    });
 
   return (
     <section className="skills" id="skills">
@@ -51,26 +35,26 @@ const Skills = () => {
         <h2 className="skills__title">Skills</h2>
           <ul>
             <li
-              className={`skills__stack${isFrontend ? "--active" : ""}`}
-              onClick={() => toggleSkills("1")}
+              className={`skills__stack${activeTab === "frontend" ? "--active" : ""}`}
+              onClick={() => toggleSkills("frontend")}
             >
               <i className="bx bx-code-alt"></i> Frontend
             </li>
             <li
-              className={`skills__stack${isBackend ? "--active" : ""}`}
-              onClick={() => toggleSkills("2")}
+              className={`skills__stack${activeTab === "backend" ? "--active" : ""}`}
+              onClick={() => toggleSkills("backend")}
             >
               <i className="bx bx-server"></i> Backend
             </li>
             <li
-              className={`skills__stack${isSupport ? "--active" : ""}`}
-              onClick={() => toggleSkills("3")}
+              className={`skills__stack${activeTab === "support" ? "--active" : ""}`}
+              onClick={() => toggleSkills("support")}
             >
               <MdMiscellaneousServices /> Support Skills
             </li>
           </ul>
         <div className="skills__cards-div">
-          {isFrontend && (
+          {activeTab === "frontend" && (
             <ul className="skills__card">
               <li className="skills__item">
                 {" "}
@@ -113,7 +97,7 @@ const Skills = () => {
             </ul>
           )}
 
-          {isBackend && (
+          {activeTab === "backend" && (
             <ul className="skills__card">
               <li className="skills__item">
                 {" "}
@@ -158,7 +142,7 @@ const Skills = () => {
             </ul>
           )}
 
-          {isSupport && (
+          {activeTab === "support" && (
             <ul className="skills__card">
               <li className="skills__item">
                 <i className="bx bx-code-curly"></i> REST API
