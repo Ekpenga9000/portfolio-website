@@ -8,8 +8,14 @@ import {
   SiMysql,
   SiNextdotjs,
   SiNginx,
+  SiJirasoftware,
 } from "react-icons/si";
-import { MdMiscellaneousServices, MdChecklistRtl } from "react-icons/md";
+import { DiScrum } from "react-icons/di";
+import {
+  MdMiscellaneousServices,
+  MdChecklistRtl,
+  MdOutlineViewKanban,
+} from "react-icons/md";
 import { VscServerProcess } from "react-icons/vsc";
 import { TbBrandOauth } from "react-icons/tb";
 import { FaGitAlt, FaFigma } from "react-icons/fa";
@@ -21,19 +27,46 @@ const Skills = () => {
   const [isBackend, setIsBackend] = useState(false);
   const [isSupport, setIsSupport] = useState(false);
 
+  const toggleSkills = (param) => {
+    if (param === "1") {
+      setIsFrontend(true);
+      setIsBackend(false);
+      setIsSupport(false);
+    }
+    if (param === "2") {
+      setIsBackend(true);
+      setIsSupport(false);
+      setIsFrontend(false);
+    }
+    if (param === "3") {
+      setIsSupport(true);
+      setIsBackend(false);
+      setIsFrontend(false);
+    }
+  };
+
   return (
     <section className="skills" id="skills">
       <div className="skills__container container">
         <h2 className="skills__title">Skills</h2>
         <div>
           <ul>
-            <li className="skills__stack--active">
+            <li
+              className={`skills__stack${isFrontend ? "--active" : ""}`}
+              onClick={() => toggleSkills("1")}
+            >
               <i className="bx bx-code-alt"></i> Frontend
             </li>
-            <li className="skills__stack">
+            <li
+              className={`skills__stack${isBackend ? "--active" : ""}`}
+              onClick={() => toggleSkills("2")}
+            >
               <i className="bx bx-server"></i> Backend
             </li>
-            <li className="skills__stack">
+            <li
+              className={`skills__stack${isSupport ? "--active" : ""}`}
+              onClick={() => toggleSkills("3")}
+            >
               <MdMiscellaneousServices /> Support Skills
             </li>
           </ul>
@@ -158,6 +191,18 @@ const Skills = () => {
               <li className="skills__item">
                 <FaFigma />
                 Figma
+              </li>
+              <li className="skills__item">
+                <DiScrum />
+                Agile/Scrum methodology
+              </li>
+              <li className="skills__item">
+                <MdOutlineViewKanban />
+                Agile/Kanban methodology
+              </li>
+              <li className="skills__item">
+                <SiJirasoftware />
+                Jira Software
               </li>
             </ul>
           )}
