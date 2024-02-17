@@ -1,0 +1,9 @@
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/typography" as *;
+@use "../../style/partials/variables" as *;
+
+.skills{
+    &__container{
+        height: 100vh;
+    }
+}

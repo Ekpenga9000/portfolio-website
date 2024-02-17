@@ -3,10 +3,10 @@ import { pdfjs } from 'react-pdf';
 import { useState, useRef, useLayoutEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from "gsap";
-// import ProgressBar from './components/progressBar/ProgressBar';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import About from './components/about/About';
+import Skills from './components/skills/Skills';
 gsap.registerPlugin(ScrollTrigger);
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -16,7 +16,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 function App() {
   const cursorFollower = useRef(null);
-  const projectHeader = useRef(null);
+  const triggerDiv = useRef(null);
+  const topArrow = useRef(null);
   const comp = useRef(null); 
  
   useLayoutEffect(() => {
@@ -29,17 +30,20 @@ function App() {
       });
     });
 
-    let ctx = gsap.context(() => {
-      gsap.from(projectHeader.current, {
-        duration: 1, 
-        x: -300, 
-        opacity: 0.2, 
-        scrollTrigger: projectHeader.current,
-        ease:"power2.out"
-      })
-    }, comp); 
-
-    return () => ctx.revert(); 
+    const tl = gsap.timeline();
+    
+    tl.to(topArrow.current, {
+      duration:1,
+      opacity: 1, 
+      display: "block",
+      scrollTrigger: {
+        trigger: triggerDiv.current, 
+        scrub: true,
+        start: "top 0%",
+        bottom: "bottom 100%"
+      }, 
+      ease:"power1.out"
+    })
 
   }, []);
 
@@ -47,8 +51,14 @@ function App() {
     <>
       <Header />
       <Home />
-      <About/>
+      <section ref={triggerDiv}>
+        <About/>
+      </section>
       <div ref={cursorFollower} className='app__cursor-follower'></div>
+      <a href="#home" className='app__top-arrow' ref={topArrow}>
+        <i className='bx bx-chevrons-up bx-fade-down' ></i>
+      </a>
+      <Skills/>
     </>
   )
 }
