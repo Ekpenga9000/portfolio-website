@@ -27,7 +27,7 @@ const Skills = () => {
 
     const toggleSkills = useCallback((param) => {
         setActiveTab(param);
-    });
+    }, []);
 
   return (
     <section className="skills" id="skills">
