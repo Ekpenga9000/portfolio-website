@@ -100,25 +100,10 @@
     margin-bottom: 1rem;
   }
   &__contact {
-    display: inline-block;
-    position: relative;
-    background-color: $title-color;
-    color: $container-color;
-    padding-block: 0.9rem;
-    padding: 0.9rem 3rem 0.9rem 2.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: 0.3s;
-    &:hover {
-      background-color: $title-color--dark;
-    }
+    @include btn;
   }
   &__send {
-    position: absolute;
-    top: 0.7rem;
-    margin-left: 0.5rem;
-    display: inline-block;
-    transform: rotate(-45deg);
+    @include send-icon; 
   }
 
   &__scroll-div {

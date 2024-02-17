@@ -1,13 +1,23 @@
 import "./About.scss";
 import dev from "../../assets/images/Louis.jpg";
-import AboutInfo from "../aboutInfo/AboutInfo";
 import Card from "../card/Card";
+import fileUrl from "../../assets/resume/OMOGBARE_LOUIS_EKPENGA_Resume.pdf";
 
 const About = () => {
+  const fileName = "OMOGBARE_LOUIS_EKPENGA_Resume.pdf";
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="about" id="about">
       <div className="about__container container">
-        <h3 className="about__title">About Me</h3>
+        <h2 className="about__title">About Me</h2>
         <div className="about__main">
           <div className="about__img-div">
             <img
@@ -18,16 +28,32 @@ const About = () => {
           </div>
           <div className="about__content">
             <div className="about__card-list">
-              <Card icon={"bx bx-badge-check"} />
-              <Card icon={"bx bx-badge-check"} />
-              <Card icon={"bx bx-badge-check"} />
+              <Card
+                icon={"bx bx-badge-check"}
+                title={"Experience"}
+                message={"5+ years"}
+              />
+              <Card
+                icon={"bx bx-briefcase-alt"}
+                title={"Completed"}
+                message={"30+ Projects"}
+              />
+              <Card
+                icon={"bx bx-code-alt"}
+                title={"Enthusiasm"}
+                message={"100%"}
+              />
             </div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus
-              quod est atque. Temporibus, inventore. Obcaecati quae voluptas ad
-              quia nam.
+            <p className="about__msg">
+              An enthusiastic software developer with a passion for crafting
+              clean, efficient code. Specializing in web development, I bring
+              creativity and technical expertise to every project. Let's build
+              something remarkable together 🤝.
             </p>
-            <button>Download CV</button>
+            <button onClick={handleDownload} className="about__btn">
+              Download CV
+              <i className="uil uil-message about__send"></i>
+            </button>
           </div>
         </div>
       </div>
