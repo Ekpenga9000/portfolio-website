@@ -49,7 +49,6 @@ const Skills = () => {
     <section className="skills" id="skills">
       <div className="skills__container container">
         <h2 className="skills__title">Skills</h2>
-        <div>
           <ul>
             <li
               className={`skills__stack${isFrontend ? "--active" : ""}`}
@@ -70,7 +69,6 @@ const Skills = () => {
               <MdMiscellaneousServices /> Support Skills
             </li>
           </ul>
-        </div>
         <div className="skills__cards-div">
           {isFrontend && (
             <ul className="skills__card">
