@@ -39,7 +39,7 @@ const About = () => {
                 message={"30+ Projects"}
               />
               <Card
-                icon={"bx bx-code-alt"}
+                icon={"bx bx-code"}
                 title={"Enthusiasm"}
                 message={"100%"}
               />

@@ -33,13 +33,12 @@ function App() {
     const tl = gsap.timeline();
     
     tl.to(topArrow.current, {
-      duration:1,
-      opacity: 1, 
+      duration:2, 
       display: "block",
       scrollTrigger: {
         trigger: triggerDiv.current, 
         scrub: true,
-        start: "top 0%",
+        start: "top 50%",
         bottom: "bottom 100%"
       }, 
       ease:"power1.out"
