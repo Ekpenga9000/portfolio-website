@@ -4,6 +4,7 @@
 
 .modal{
     background-color: $container-color;
+    position: relative;
     @include tablet{
         border-radius: 0.5rem;
     }
@@ -24,6 +25,8 @@
     &__close-div{
         display: flex;
         justify-content: end;
+        position: absolute;
+        width: 95%;
     }
     &__close-icon{
         transition: .3s;
@@ -48,6 +51,9 @@
     }
     &__item{
         color: $title-color;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        display: flex;
+        gap: 0.3rem;
+        margin-bottom: 0.3rem;
     }
 }
