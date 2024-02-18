@@ -7,11 +7,29 @@
   justify-content: start;
   align-items: center;
   position: relative;
+  padding-inline: 0.5rem;
+  @include tablet {
+    width: 100%;
+  }
   &--reverse {
     @extend .details;
-    justify-content: end;
+    @include tablet{
+        justify-content: end;
+    }
   }
-
+  &__data{
+    cursor: pointer;
+    margin-left: 10%;
+    @include tablet{
+        margin-left: 0%;
+    }
+  }
+  &__edu{
+    margin-left: 10%;
+    @include tablet{
+        margin-left: 0%;
+    }
+  }
   &__role {
     color: $title-color;
   }
@@ -29,17 +47,22 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    left: 50%;
+    left: 5%;
+    @include tablet{
+        left: 50%;
+    }
   }
   &__dot {
     height: 0.7rem;
     width: 0.7rem;
     background-color: $text-color;
     border-radius: 50%;
+    margin-top: 0.5625rem;
   }
   &__line {
-    height: 50px;
+    min-height: 3.125rem;
     width: 1px;
     background-color: $text-color;
   }
+ 
 }

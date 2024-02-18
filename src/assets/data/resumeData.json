@@ -1,0 +1,53 @@
+{
+    "experience": [
+      {
+        "id": 1,
+        "title": "Software Developer",
+        "employer": "Freelance - AB",
+        "dates": "SEP 2023 - Present",
+        "isReverse": false,
+        "type": "experience"
+      },
+      {
+        "id": 2,
+        "title": "Software Developer",
+        "employer": "BIPOC Foundation - AB",
+        "dates": "SEP 2023 - Present",
+        "isReverse": true,
+        "type": "experience"
+      },
+      {
+        "id": 3,
+        "title": "Software Developer, T.A",
+        "employer": "BrainStation - ON",
+        "dates": "SEP 2023 - DEC 2023",
+        "isReverse": false,
+        "type": "experience"
+      },
+      {
+        "id": 4,
+        "title": "Software Developer",
+        "employer": "AAJIMATICS Inc. - ON",
+        "dates": "Nov 2022 – Jun 2023",
+        "isReverse": true,
+        "type": "experience"
+      },
+      {
+        "id": 5,
+        "title": "Software Engineer",
+        "employer": "BELDORE Technologies - NG",
+        "dates": "Apr 2022 – Nov 2022",
+        "isReverse": false,
+        "type": "experience"
+      },
+      {
+        "id": 6,
+        "title": "Software Developer",
+        "employer": "Freelance - NG",
+        "dates": "Jul 2018 – Apr 2022",
+        "isReverse": true,
+        "type": "experience"
+      }
+    ]
+  }
+  

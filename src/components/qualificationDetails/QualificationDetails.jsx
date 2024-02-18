@@ -1,20 +1,42 @@
 import React from "react";
 import "./QualificationDetails.scss";
 
-const QualificationDetails = ({ title, employer, date, isReverse }) => {
+const QualificationDetails = ({
+  id,
+  title,
+  employer,
+  dates,
+  isReverse,
+  type,
+}) => {
   return (
     <div className={`details${isReverse ? "--reverse" : ""}`}>
-      <div className="details__data">
-        <h5 className="qualification__role">{title}</h5>
-              <p className="qualification__employer">{ employer }</p>
-        <p className="qualification__date">
-          <i class="bx bx-calendar"></i> {date}
-        </p>
-      </div>
-      <div className="qualification__timeline">
-        <div className="qualification__dot"></div>
-        <div className="qualification__line"></div>
-      </div>
+          {type === "experience" && <>
+              <div className="details__data">
+                  <h5 className="details__role">{title}</h5>
+                  <p className="details__employer">{employer}</p>
+                  <p className="details__date">
+                      <i className="bx bx-calendar"></i> {dates}
+                  </p>
+              </div>
+              <div className="details__timeline">
+                  <div className="details__dot"></div>
+                  <div className="details__line"></div>
+              </div>
+          </>}
+          {type !== "experience" && <>
+              <div className="details__edu">
+                  <h5 className="details__role">{title}</h5>
+                  <p className="details__employer">{employer}</p>
+                  <p className="details__date">
+                      <i className="bx bx-calendar"></i> {dates}
+                  </p>
+              </div>
+              <div className="details__timeline">
+                  <div className="details__dot"></div>
+                  <div className="details__line"></div>
+              </div>
+          </>}
     </div>
   );
 };

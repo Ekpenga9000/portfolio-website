@@ -1,10 +1,13 @@
 import { useCallback, useState } from "react";
 import "./Qualification.scss";
+import data from "../../assets/data/resumeData.json";
+import data2 from "../../assets/data/educationData.json";
 import QualificationDetails from "../qualificationDetails/QualificationDetails";
 
 const Qualification = () => {
+  const experiences = data.experience;
+  const education = data2.education;
   const [activeTab, setActiveTab] = useState("education");
-
   const toggleTabs = useCallback((param) => {
     setActiveTab(param);
   });
@@ -20,7 +23,7 @@ const Qualification = () => {
             }`}
             onClick={() => toggleTabs("education")}
           >
-            <i class="uil uil-graduation-cap"></i> Education
+            <i className="uil uil-graduation-cap"></i> Education
           </li>
           <li
             className={`qualification__tab${
@@ -28,107 +31,46 @@ const Qualification = () => {
             }`}
             onClick={() => toggleTabs("experience")}
           >
-            <i class="uil uil-suitcase-alt"></i> Experience
+            <i className="uil uil-suitcase-alt"></i> Experience
           </li>
         </ul>
       </div>
       <div className="qualification__details-container">
         <div className="qualification__details-div">
-          {/* <div className="qualification__details">
-            <div className="qualification__education">
-              <h5 className="qualification__role">Software Developer</h5>
-              <p className="qualification__employer">
-                Freelance - Lethbridge, AB
-              </p>
-              <p className="qualification__date">
-                <i class="bx bx-calendar"></i> Jul 2018 - Present
-              </p>
-            </div>
-            <div className="qualification__timeline">
-              <div className="qualification__dot"></div>
-              <div className="qualification__line"></div>
-            </div>
-          </div>
 
-          <div className="qualification__details--reverse">
-            <div className="qualification__education">
-              <h5 className="qualification__role">Software Developer</h5>
-              <p className="qualification__employer">
-                Freelance - Lethbridge, AB
-              </p>
-              <p className="qualification__date">
-                <i class="bx bx-calendar"></i> Jul 2018 - Present
-              </p>
-            </div>
-            <div className="qualification__timeline">
-              <div className="qualification__dot"></div>
-              <div className="qualification__line"></div>
-            </div>
-          </div>
+          {activeTab === "experience" &&
+            experiences.map(
+              ({ id, title, isReverse, employer, dates, type }) => {
+                return (
+                  <QualificationDetails
+                    key={id}
+                    id={id}
+                    dates={dates}
+                    isReverse={isReverse}
+                    title={title}
+                    employer={employer}
+                    type={type}
+                  />
+                );
+              }
+            )}
 
-          <div className="qualification__details">
-            <div className="qualification__education">
-              <h5 className="qualification__role">Software Developer</h5>
-              <p className="qualification__employer">
-                Freelance - Lethbridge, AB
-              </p>
-              <p className="qualification__date">
-                <i class="bx bx-calendar"></i> Jul 2018 - Present
-              </p>
-            </div>
-            <div className="qualification__timeline">
-              <div className="qualification__dot"></div>
-              <div className="qualification__line"></div>
-            </div>
-          </div>
-
-          <div className="qualification__details--reverse">
-            <div className="qualification__education">
-              <h5 className="qualification__role">Software Developer</h5>
-              <p className="qualification__employer">
-                Freelance - Lethbridge, AB
-              </p>
-              <p className="qualification__date">
-                <i class="bx bx-calendar"></i> Jul 2018 - Present
-              </p>
-            </div>
-            <div className="qualification__timeline">
-              <div className="qualification__dot"></div>
-              <div className="qualification__line"></div>
-            </div>
-          </div>
-
-          <div className="qualification__details">
-            <div className="qualification__education">
-              <h5 className="qualification__role">Software Developer</h5>
-              <p className="qualification__employer">
-                Freelance - Lethbridge, AB
-              </p>
-              <p className="qualification__date">
-                <i class="bx bx-calendar"></i> Jul 2018 - Present
-              </p>
-            </div>
-            <div className="qualification__timeline">
-              <div className="qualification__dot"></div>
-              <div className="qualification__line"></div>
-            </div>
-          </div>
-
-          <div className="qualification__details--reverse">
-            <div className="qualification__education">
-              <h5 className="qualification__role">Software Developer</h5>
-              <p className="qualification__employer">
-                Freelance - Lethbridge, AB
-              </p>
-              <p className="qualification__date">
-                <i class="bx bx-calendar"></i> Jul 2018 - Present
-              </p>
-            </div>
-            <div className="qualification__timeline">
-              <div className="qualification__dot"></div>
-              <div className="qualification__line"></div>
-            </div>
-          </div> */}
+          {activeTab === "education" &&
+            education.map(
+              ({ id, title, isReverse, employer, dates, type }) => {
+                return (
+                  <QualificationDetails
+                    key={id}
+                    id={id}
+                    dates={dates}
+                    isReverse={isReverse}
+                    title={title}
+                    employer={employer}
+                    type={type}
+                  />
+                );
+              }
+            )}
         </div>
       </div>
     </section>

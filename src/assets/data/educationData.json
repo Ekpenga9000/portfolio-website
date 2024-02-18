@@ -1,0 +1,36 @@
+{
+    "education": [
+      {
+        "id": 1,
+        "title": "Diploma | Software Engineering",
+        "employer": "BrainStation - ON",
+        "dates": "Jun 2023 - Aug 2023",
+        "isReverse": false,
+        "type": "education"
+      },
+      {
+        "id": 2,
+        "title": "Certification | Scrum Master",
+        "employer": "Scrum Alliance - CO",
+        "dates": "Feb 2023",
+        "isReverse": true,
+        "type": "education"
+      },
+      {
+        "id": 3,
+        "title": "Diploma | Web Development",
+        "employer": "Moat Academy - NG",
+        "dates": "Apr 2022 - Jul 2022",
+        "isReverse": false,
+        "type": "education"
+      },
+      {
+        "id": 4,
+        "title": "Bachelors of Art | Philosophy",
+        "employer": "University of Benin - NG",
+        "dates": "Apr 2010 - Nov 2014",
+        "isReverse": true,
+        "type": "education"
+      }
+    ]
+  }
