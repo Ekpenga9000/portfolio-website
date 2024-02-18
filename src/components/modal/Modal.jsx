@@ -24,9 +24,7 @@ const Modal = ({ id, deactivateModal }) => {
   return (
       <div className='modal'>
           <div className="modal__container">
-              <div className='modal__close-div'>
               <i className="uil uil-multiply modal__close-icon" onClick={()=>deactivateModal()}></i>
-              </div>
               <div className="modal__content-div">
                   <h3>{title}</h3>
                   <p className='modal__company'>{company}</p>
