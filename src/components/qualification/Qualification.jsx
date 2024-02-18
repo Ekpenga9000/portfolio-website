@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import "./Qualification.scss";
+import experienceDetails from "../../assets/data/experienceDetails.json";
 import data from "../../assets/data/resumeData.json";
 import data2 from "../../assets/data/educationData.json";
 import QualificationDetails from "../qualificationDetails/QualificationDetails";
@@ -7,10 +8,17 @@ import QualificationDetails from "../qualificationDetails/QualificationDetails";
 const Qualification = () => {
   const experiences = data.experience;
   const education = data2.education;
-  const [activeTab, setActiveTab] = useState("education");
+    const [activeTab, setActiveTab] = useState("education");
+  const [activeModal, setActiveModal] = useState(false); 
   const toggleTabs = useCallback((param) => {
     setActiveTab(param);
   });
+
+    const activateModal = (id) => {
+        // filter the responsibilities using the id 
+        const responsibilitiesArr = experienceDetails.experience.find((responsibility) => responsibility.id === id);
+        console.log("Resp", responsibilitiesArr);
+  };
 
   return (
     <section className="qualification">
@@ -37,7 +45,6 @@ const Qualification = () => {
       </div>
       <div className="qualification__details-container">
         <div className="qualification__details-div">
-
           {activeTab === "experience" &&
             experiences.map(
               ({ id, title, isReverse, employer, dates, type }) => {
@@ -50,27 +57,26 @@ const Qualification = () => {
                     title={title}
                     employer={employer}
                     type={type}
+                    activateModal={activateModal}
                   />
                 );
               }
             )}
 
           {activeTab === "education" &&
-            education.map(
-              ({ id, title, isReverse, employer, dates, type }) => {
-                return (
-                  <QualificationDetails
-                    key={id}
-                    id={id}
-                    dates={dates}
-                    isReverse={isReverse}
-                    title={title}
-                    employer={employer}
-                    type={type}
-                  />
-                );
-              }
-            )}
+            education.map(({ id, title, isReverse, employer, dates, type }) => {
+              return (
+                <QualificationDetails
+                  key={id}
+                  id={id}
+                  dates={dates}
+                  isReverse={isReverse}
+                  title={title}
+                  employer={employer}
+                  type={type}
+                />
+              );
+            })}
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@
         "title": "Software Developer | Freelance",
         "location": "Lethbridge, AB",
         "dates": "SEP 2023 - Present",
+        "role": "Remote",
         "responsibilities": [
           "Designed, Developed and maintained a website for a client working with people with special needs.",
           "Designed a wireframe and prototype using Figma design tool while communicating with the client to gather requirements.",
@@ -13,9 +14,10 @@
       },
       {
         "id": 2,
-        "title": "Software Developer (Volunteer) | BIPOC Foundation",
+        "title": "Software Developer | BIPOC Foundation",
         "location": "Lethbridge, AB",
         "dates": "SEP 2023 - Present",
+        "role": "Volunteer",
         "responsibilities": [
           "Collaborated with the team on project planning and requirements gathering using JIRA.",
           "Designed a wireframe and prototype using Figma design tool while communicating with the client to gather requirements.",
@@ -25,10 +27,10 @@
       },
       {
         "id": 3,
-        "title": "Software Developer | BrainStation",
+        "title": "Software Developer, T.A | BrainStation",
         "location": "Toronto, ON",
         "dates": "SEP 2023 - DEC 2023",
-        "role": "Teaching Assistant, Contract Full-Time",
+        "role": "On-Site, Contract Full-Time",
         "responsibilities": [
           "Championed a nurturing environment for 11 junior developers, providing mentorship and effective communication, fostering a culture of innovation and excellence.",
           "Executed code reviews in JavaScript, React, and Express providing feedback that led to a 90% increase in the effectiveness of the developers and application performance.",
@@ -38,9 +40,9 @@
       {
         "id": 4,
         "title": "Software Developer | AAJIMATICS Incorporated",
-        "location": "Remote",
+        "location": "Hamilton, ON",
         "dates": "Nov 2022 – Jun 2023",
-        "role": "Contract Full-time",
+        "role": "Remote, Contract Full-time",
         "responsibilities": [
           "Collaborated with team members to design and build SQL database using MySQL database management system and build APIs and integrate third-party APIs on e-health product using Express.js and spring boot working with Docker and Kubernetes clusters.",
           "Developed an in-house full-stack client management system on Node.js, Express.js, and React.js using TypeScript, and implemented state management using Redux that led to a 10% boost in productivity.",
@@ -52,6 +54,7 @@
         "title": "Software Engineer | BELDORE Technologies",
         "location": "Lagos, NG",
         "dates": "Apr 2022 – Nov 2022",
+        "role": "Hybrid",
         "responsibilities": [
           "Developed and maintained responsive websites, using the power of React Hooks to create dynamic and reusable components on React.js, consistently meeting design specifications and accessibility standards for 2 satisfied clients.",
           "Collaborated with a team of 2 frontend developers and a Developer lead in building reusable frontend components for a vacation booking application on React and maintaining versions of the application on GitHub."
@@ -62,21 +65,11 @@
         "title": "Software Developer | Freelance",
         "location": "Lagos, NG",
         "dates": "Jul 2018 – Apr 2022",
+        "role": "Hybrid",
         "responsibilities": [
           "Designed and Developed responsive website for clients.",
           "Developed engaging, responsive and professional websites for clients demonstrating a strong understanding of WordPress, HTML, CSS, and JavaScript.",
           "Built a website for a book cover design company."
-        ]
-      },
-      {
-        "id": 7,
-        "title": "Business Development & Partnership Relations | JEDEBB Resources",
-        "location": "Lagos, NG",
-        "dates": "May 2015 – Jul 2018",
-        "responsibilities": [
-          "Developed and maintained a comprehensive company brochure that boosted marketing by 25%.",
-          "Secured 5 new clients for the company.",
-          "Collaborated with clients to gather requirements for customized and focused employee training programmes."
         ]
       }
     ]
