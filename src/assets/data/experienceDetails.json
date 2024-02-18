@@ -3,7 +3,7 @@
       {
         "id": 1,
         "title": "Software Developer | Freelance",
-        "location": "Lethbridge, AB",
+        "company": "Lethbridge, AB",
         "dates": "SEP 2023 - Present",
         "role": "Remote",
         "responsibilities": [
@@ -14,10 +14,10 @@
       },
       {
         "id": 2,
-        "title": "Software Developer | BIPOC Foundation",
-        "location": "Lethbridge, AB",
+        "title": "Software Developer",
+        "company": "BIPOC Foundation - Lethbridge, AB",
         "dates": "SEP 2023 - Present",
-        "role": "Volunteer",
+        "role": "Hybrid, Volunteer",
         "responsibilities": [
           "Collaborated with the team on project planning and requirements gathering using JIRA.",
           "Designed a wireframe and prototype using Figma design tool while communicating with the client to gather requirements.",
@@ -27,8 +27,8 @@
       },
       {
         "id": 3,
-        "title": "Software Developer, T.A | BrainStation",
-        "location": "Toronto, ON",
+        "title": "Software Developer, T.A",
+        "company": "BrainStation - Toronto, ON",
         "dates": "SEP 2023 - DEC 2023",
         "role": "On-Site, Contract Full-Time",
         "responsibilities": [
@@ -39,8 +39,8 @@
       },
       {
         "id": 4,
-        "title": "Software Developer | AAJIMATICS Incorporated",
-        "location": "Hamilton, ON",
+        "title": "Software Developer",
+        "company": "AAJIMATICS Incorporated - Hamilton, ON",
         "dates": "Nov 2022 – Jun 2023",
         "role": "Remote, Contract Full-time",
         "responsibilities": [
@@ -51,8 +51,8 @@
       },
       {
         "id": 5,
-        "title": "Software Engineer | BELDORE Technologies",
-        "location": "Lagos, NG",
+        "title": "Software Engineer",
+        "company": "BELDORE Technologies - Lagos, NG",
         "dates": "Apr 2022 – Nov 2022",
         "role": "Hybrid",
         "responsibilities": [
@@ -62,10 +62,10 @@
       },
       {
         "id": 6,
-        "title": "Software Developer | Freelance",
-        "location": "Lagos, NG",
+        "title": "Software Developer",
+        "company": "Freelance - Lagos, NG",
         "dates": "Jul 2018 – Apr 2022",
-        "role": "Hybrid",
+        "role": "Remote",
         "responsibilities": [
           "Designed and Developed responsive website for clients.",
           "Developed engaging, responsive and professional websites for clients demonstrating a strong understanding of WordPress, HTML, CSS, and JavaScript.",

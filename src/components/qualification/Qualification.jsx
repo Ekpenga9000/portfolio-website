@@ -1,24 +1,28 @@
 import { useCallback, useState } from "react";
 import "./Qualification.scss";
-import experienceDetails from "../../assets/data/experienceDetails.json";
 import data from "../../assets/data/resumeData.json";
 import data2 from "../../assets/data/educationData.json";
 import QualificationDetails from "../qualificationDetails/QualificationDetails";
+import Modal from "../modal/Modal";
 
 const Qualification = () => {
   const experiences = data.experience;
   const education = data2.education;
-    const [activeTab, setActiveTab] = useState("education");
+  const [activeTab, setActiveTab] = useState("education");
+  const [modalId, setModalId] = useState(1);
   const [activeModal, setActiveModal] = useState(false); 
   const toggleTabs = useCallback((param) => {
     setActiveTab(param);
   });
 
     const activateModal = (id) => {
-        // filter the responsibilities using the id 
-        const responsibilitiesArr = experienceDetails.experience.find((responsibility) => responsibility.id === id);
-        console.log("Resp", responsibilitiesArr);
+      setModalId(id); 
+      setActiveModal(true);
   };
+
+  const deactivateModal = () => {
+    setActiveModal(false);
+  }
 
   return (
     <section className="qualification">
@@ -79,6 +83,9 @@ const Qualification = () => {
             })}
         </div>
       </div>
+      {activeModal && <div className="qualification__modal">
+        <Modal id={modalId} deactivateModal={ deactivateModal } />
+      </div>}
     </section>
   );
 };

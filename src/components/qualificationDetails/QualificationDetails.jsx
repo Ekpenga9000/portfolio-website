@@ -12,7 +12,7 @@ const QualificationDetails = ({
 }) => {
 
     const handleModal = () => {
-      activateModal(id)
+        activateModal(id);
   }
   return (
     <div className={`details${isReverse ? "--reverse" : ""}`}>
