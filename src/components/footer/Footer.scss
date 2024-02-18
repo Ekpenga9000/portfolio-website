@@ -3,29 +3,26 @@
 @use "../../style/partials/typography" as *;
 
 .footer{
+    margin-top: 1.5rem;
+    height: 50vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    &__icons-div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-        margin-bottom: 2rem;
+    align-items: top;
+    background-color: $container-color;
+    padding-top: 10%;
+    @include tablet{
+        padding: 5%;
     }
-    &__icon{
-        font-size: 2rem;
-        text-decoration: none;
-        color: $text-primary;
-        &:hover{
-            color: $text-secondary;
-        }
-    }
-    &__copyright{
-        font-family: "Montserrat", sans-serif;
-        color: $text-primary;
+    &__logo{
+        display: block;
         text-align: center;
-        font-size: 0.7rem;
+        color: $title-color;
+        font-weight: 500;
+        cursor: pointer;
+        font-size: 2rem;
+        transition: .3s;
+        &:hover{
+            color: $title-color--dark;
+        }
     }
 }

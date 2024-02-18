@@ -8,6 +8,7 @@
     }
   }
   &__form {
+    background-color: $container-color;
     padding: 1.2rem 1rem;
     border-radius: 0.3rem;
     box-shadow: 3px 3px 5px 0px rgba(185, 179, 179, 0.75);
@@ -32,6 +33,7 @@
   }
   &__txt-area {
     @extend .contact__input;
+    resize: vertical;
   }
   &__btn-div{
     display: flex;

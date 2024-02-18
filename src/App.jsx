@@ -1,6 +1,6 @@
 import './App.scss';
 import { pdfjs } from 'react-pdf';
-import { useState, useRef, useLayoutEffect } from 'react';
+import { useRef, useLayoutEffect } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from "gsap";
 import Header from './components/header/Header';
@@ -9,6 +9,7 @@ import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
+import Footer from "./components/footer/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -61,7 +62,8 @@ function App() {
       </a>
       <Skills />
       <Qualification />
-      <Contact/>
+      <Contact />
+      <Footer/>
     </>
   )
 }

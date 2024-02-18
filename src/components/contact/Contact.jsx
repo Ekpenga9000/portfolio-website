@@ -1,4 +1,4 @@
-import React from "react";
+import {useState} from "react";
 import "./Contact.scss";
 
 const Contact = () => {
@@ -30,7 +30,7 @@ const Contact = () => {
           ></textarea>
           <div className="contact__btn-div">
             <button className="contact__btn">
-              Send <i className="uil uil-message contact__icon"></i>
+              Send message <i className="uil uil-message contact__icon"></i>
             </button>
           </div>
         </form>

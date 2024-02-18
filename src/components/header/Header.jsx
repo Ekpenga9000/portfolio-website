@@ -27,7 +27,7 @@ const Header = () => {
   return (
       <header className='header'>
           <nav className='nav container' ref={comp}>
-              <a href="index.html" className="nav__logo">Ekpenga</a>
+              <a href="index.html" className="nav__logo">oe.</a>
 
               <div className="nav__menu">
                   <ul className="nav__list grid">
