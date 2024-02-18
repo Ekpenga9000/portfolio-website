@@ -16,7 +16,9 @@
   }
   &__title {
     text-align: center;
-    margin-bottom: 2rem;
+  }
+  &__sub-title{
+    @include sub-header;
   }
   &__stack {
     display: inline-block;

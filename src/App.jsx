@@ -8,6 +8,7 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import Skills from './components/skills/Skills';
 import Qualification from './components/qualification/Qualification';
+import Contact from './components/contact/Contact';
 gsap.registerPlugin(ScrollTrigger);
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -59,7 +60,8 @@ function App() {
         <i className='bx bx-chevrons-up bx-fade-down' ></i>
       </a>
       <Skills />
-      <Qualification/>
+      <Qualification />
+      <Contact/>
     </>
   )
 }

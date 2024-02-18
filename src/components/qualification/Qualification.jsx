@@ -28,6 +28,7 @@ const Qualification = () => {
     <section className="qualification">
       <div className="qualification__container container">
         <h2 className="qualification__title">Qualifications</h2>
+        <span className="qualification__sub-title">The journey so for</span>
         <ul className="qualification__menu">
           <li
             className={`qualification__tab${

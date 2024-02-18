@@ -33,6 +33,7 @@ const Skills = () => {
     <section className="skills" id="skills">
       <div className="skills__container container">
         <h2 className="skills__title">Skills</h2>
+        <span className="skills__sub-title">A life long Learner</span>
           <ul>
             <li
               className={`skills__stack${activeTab === "frontend" ? "--active" : ""}`}

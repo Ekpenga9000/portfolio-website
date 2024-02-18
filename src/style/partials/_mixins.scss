@@ -1,42 +1,50 @@
 @use "./variables" as *;
 
-@mixin mobile-lg{
-    @media screen and (min-width:$mobile-lg-breakpoint) {
-        @content;
-    }
+@mixin mobile-lg {
+  @media screen and (min-width: $mobile-lg-breakpoint) {
+    @content;
+  }
 }
 
-@mixin tablet{
-    @media screen and (min-width:$tablet-breakpoint) {
-        @content;
-    }
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
 }
 
-@mixin desktop{
-    @media screen and (min-width:$desktop-breakpoint) {
-        @content;
-    }
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
 }
 
-@mixin btn{
-    display: inline-block;
-    position: relative;
-    background-color: $title-color;
-    color: $container-color;
-    padding-block: 0.9rem;
-    padding: 0.9rem 3rem 0.9rem 2.5rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: 0.3s;
-    &:hover {
-      background-color: $title-color--dark;
-    }
+@mixin btn {
+  display: inline-block;
+  position: relative;
+  background-color: $title-color;
+  color: $container-color;
+  padding-block: 0.9rem;
+  padding: 0.9rem 3rem 0.9rem 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $title-color--dark;
+  }
 }
 
-@mixin send-icon{
-    position: absolute;
-    top: 0.7rem;
-    margin-left: 0.5rem;
-    display: inline-block;
-    transform: rotate(-45deg);
+@mixin send-icon {
+  position: absolute;
+  top: 0.7rem;
+  margin-left: 0.5rem;
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+
+@mixin sub-header {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
 }

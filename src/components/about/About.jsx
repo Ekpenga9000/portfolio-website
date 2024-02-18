@@ -18,6 +18,7 @@ const About = () => {
     <section className="about" id="about">
       <div className="about__container container">
         <h2 className="about__title">About Me</h2>
+        <span className="about__sub-title">An enthusiastic Developer</span>
         <div className="about__main">
           <div className="about__img-div">
             <img
