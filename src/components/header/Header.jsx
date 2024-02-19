@@ -50,17 +50,17 @@ const Header = () => {
                           </a>
                       </li>
                       <li className="nav__item">
-                          <a href="#porfolio" className="nav__link">
+                          <a href="#projects" className="nav__link">
                               <i className="uil uil-scenery nav__icon"></i>
-                              Portfolio
+                              Projects
                           </a>
                       </li>
-                      <li className="nav__item">
+                      {/* <li className="nav__item">
                           <a href="#services" className="nav__link">
                               <i className="uil uil-briefcase-alt nav__icon"></i>
                               Services
                           </a>
-                      </li>
+                      </li> */}
                       <li className="nav__item">
                           <a href="#contact" className="nav__link">
                               <i className="uil uil-message nav__icon"></i>
@@ -91,17 +91,17 @@ const Header = () => {
                           </a>
                       </li>
                       <li className="nav__item">
-                          <a href="#porfolio" className="nav__link">
+                          <a href="#projects" className="nav__link">
                               <i className="uil uil-scenery nav__icon"></i>
-                              Portfolio
+                              Projects
                           </a>
                       </li>
-                      <li className="nav__item">
+                      {/* <li className="nav__item">
                           <a href="#services" className="nav__link">
                               <i className="uil uil-briefcase-alt nav__icon"></i>
                               Services
                           </a>
-                      </li>
+                      </li> */}
                       <li className="nav__item">
                           <a href="#contact" className="nav__link">
                               <i className="uil uil-message nav__icon"></i>

@@ -10,6 +10,7 @@ import Skills from './components/skills/Skills';
 import Qualification from './components/qualification/Qualification';
 import Contact from './components/contact/Contact';
 import Footer from "./components/footer/Footer";
+import Projects from './components/project/Projects';
 gsap.registerPlugin(ScrollTrigger);
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(
@@ -62,6 +63,7 @@ function App() {
       </a>
       <Skills />
       <Qualification />
+      <Projects/>
       <Contact />
       <Footer/>
     </>
