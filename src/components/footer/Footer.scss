@@ -11,7 +11,8 @@
     background-color: $container-color;
     padding-top: 10%;
     @include tablet{
-        padding: 5%;
+        padding-top: 5%;
+        margin-top: 2rem;
     }
     &__logo{
         display: block;

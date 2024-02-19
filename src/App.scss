@@ -75,23 +75,6 @@ button {
   gap: 1.5rem;
 }
 
-.button {
-  display: inline-block;
-  background-color: $title-color;
-  color: $container-color;
-  padding: 1.25rem 2rem;
-  border-radius: 1rem;
-  font-weight: 400;
-  &:hover {
-    background-color: $title-color--dark;
-  }
-  &--flex {
-    display: inline-flex;
-    align-items: center;
-  }
-  //Check for the button icon.
-}
-
 .app {
   &__cursor-follower {
     position: fixed;
@@ -114,7 +97,8 @@ button {
     right: 1rem;
     bottom: 3rem;
     color: $container-color;
-    background-color: $text-color;
+    background-color: rgba($color: $text-color, $alpha: 0.5);
+    z-index: 99;
     font-size: 1.5rem;
     text-align: center;
     transition: 0.3s;

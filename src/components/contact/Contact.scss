@@ -35,9 +35,18 @@
     @extend .contact__input;
     resize: vertical;
   }
+  &__span{
+    font-size: 0.9rem;
+  }
   &__btn-div{
     display: flex;
-    justify-content: end;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    align-items: center;
+    @include tablet{
+        flex-direction: row;
+        justify-content: space-between;
+    }
   }
   &__btn {
     @include btn;

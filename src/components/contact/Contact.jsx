@@ -2,8 +2,18 @@ import {useState} from "react";
 import "./Contact.scss";
 
 const Contact = () => {
+    const [formValue, setFormValue] = useState({ name: "", email: "", message: "" });
+    const [message, setMessage] = useState("");
+
   const handleSubmit = (e) => {
-    e.preventDefault();
+      e.preventDefault();
+      const { name, email, message } = formValue; 
+      if (!name.trim() || !email.trim() || !message.trim()) {
+          setMessage("Please fill all fields.");
+          return;
+      }
+
+      
   };
   return (
     <section className="contact" id="contact">
@@ -28,7 +38,8 @@ const Contact = () => {
             placeholder="Your message"
             className="contact__txt-area"
           ></textarea>
-          <div className="contact__btn-div">
+                  <div className="contact__btn-div">
+                      <span className="contact__span">{ message }</span>
             <button className="contact__btn">
               Send message <i className="uil uil-message contact__icon"></i>
             </button>
