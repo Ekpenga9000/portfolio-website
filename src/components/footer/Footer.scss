@@ -21,8 +21,30 @@
         cursor: pointer;
         font-size: 2rem;
         transition: .3s;
+        margin-bottom: 1rem;
         &:hover{
             color: $title-color--dark;
         }
+    }
+    &__div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    &__link{
+        font-size: 0.9rem;
+        color: $text-color;
+        cursor: pointer;
+    }
+    &__icon{
+        cursor: pointer;
+        color: $title-color;
+        font-size: 1.3rem;
+    }
+    &__copyright{
+        margin-top: 3rem;
+        font-size: 0.7rem;
     }
 }
