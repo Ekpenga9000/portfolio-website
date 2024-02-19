@@ -76,16 +76,7 @@
     }
   }
   &__img-div {
-    height: 13.75rem;
-    width: 13.75rem;
-    @include mobile-lg {
-      height: 15.625rem;
-      width: 15.625rem;
-    }
-    @include tablet {
-      height: 18.75rem;
-      width: 18.75rem;
-    }
+    @include img-div;
     @include desktop {
       order: 1;
     }

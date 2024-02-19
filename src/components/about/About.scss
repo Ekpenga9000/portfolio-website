@@ -35,16 +35,7 @@
     }
   }
   &__img-div {
-    height: 13.75rem;
-    width: 13.75rem;
-    @include mobile-lg{
-        height: 15.625rem;
-        width: 15.625rem;
-    }
-    @include tablet{
-      height: 18.75rem;
-      width: 18.75rem;
-    }
+    @include img-div;
   }
   &__img {
     height: 100%;
@@ -61,7 +52,8 @@
     justify-content: space-between;
   }
   &__msg{
-    margin-block: 1.2rem;
+    margin-block: 1rem;
+    font-size: 0.9rem;
   }
   &__btn{
     display: inline-block;
