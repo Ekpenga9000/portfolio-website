@@ -26,6 +26,9 @@ body {
   background-color: $body-color;
   color: $text-color;
   padding-bottom:3rem;
+  @include desktop{
+    padding-bottom: 0;
+  }
 }
 
 h1,

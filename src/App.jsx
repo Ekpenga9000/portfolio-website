@@ -22,7 +22,6 @@ function App() {
   const cursorFollower = useRef(null);
   const triggerDiv = useRef(null);
   const topArrow = useRef(null);
-  const comp = useRef(null); 
  
   useLayoutEffect(() => {
     document.addEventListener("mousemove", e => {
@@ -70,4 +69,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

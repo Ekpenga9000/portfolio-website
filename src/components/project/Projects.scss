@@ -1,0 +1,56 @@
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/typography" as *;
+@use "../../style/partials/variables" as *;
+
+.projects{
+    &__container{
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__title{
+        text-align: center;
+    }
+    &__subtitle{
+        @include sub-header;
+    }
+    &__carousel-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__carousel{
+        width: 90%;
+        margin-bottom: 1rem;
+        @include desktop{
+            width: 60%;
+        }
+    }
+    &__h4{
+        margin-bottom: 0.5rem;
+    }
+    &__message{
+        text-align: center;
+        font-size: 0.9rem;
+        padding-inline:1rem;
+        @include tablet{
+            padding-inline:23%; 
+        }
+    }
+    &__btn-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    &__link{
+        font-size: 1.3rem;
+        color: $text-color;
+        transition: .3s;
+        &:hover{
+            color: $title-color;
+        }
+    }
+}

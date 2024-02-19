@@ -3,6 +3,10 @@
 
 .contact {
   &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include desktop {
       padding-inline: 10%;
     }
