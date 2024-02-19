@@ -1,8 +1,11 @@
-import React from "react";
+import { useState } from "react";
 import "./Projects.scss";
 import Swiper from "../swiper/Swiper";
+import Video from "../video/Video";
 
 const Projects = () => {
+  const [displayVideo, setDisplayVideo] = useState(false);
+
   return (
     <section className="projects" id="projects">
       <div className="projects__container container">
@@ -10,7 +13,8 @@ const Projects = () => {
         <span className="projects__subtitle">What I'm up to</span>
         <div className="projects__carousel-div">
           <div className="projects__carousel">
-            <Swiper />
+            {!displayVideo && <Swiper />}
+            {displayVideo && <Video />}
           </div>
           <h4 className="projects__h4">Kubi - Project management software</h4>
           <p className="projects__message">
@@ -27,7 +31,18 @@ const Projects = () => {
               <i className="uil uil-github-alt"></i>
             </a>
             <span className="projects__link">
-              <i className="uil uil-play"></i>
+              {!displayVideo && (
+                <i
+                  className="uil uil-play"
+                  onClick={() => setDisplayVideo(!displayVideo)}
+                ></i>
+                          )}
+                          {displayVideo && (
+                <i
+                  className="uil uil-square-shape"
+                  onClick={() => setDisplayVideo(!displayVideo)}
+                ></i>
+              )}
             </span>
           </div>
         </div>
