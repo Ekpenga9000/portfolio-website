@@ -1,8 +1,15 @@
+@use "../../style/partials/variables" as *;
 .swiper{
     &__img{
         height: 100%;
         width: 100%;
         object-fit: cover;
         display: block;
+    }
+    &-pagination-bullet{
+        background-color: $text-color;
+        &-active{
+            background-color: $title-color--dark;
+        }
     }
 }
