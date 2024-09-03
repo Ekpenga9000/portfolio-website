@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.scss";
-import louis from "../../assets/images/Louis.jpg";
+import louis from "../../assets/images/Louis.webp";
 
 const Home = () => {
   return (

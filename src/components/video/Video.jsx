@@ -1,6 +1,6 @@
 import React from "react";
 import "./Video.scss";
-import poster from "../../assets/images/kubi-screenshot.png";
+import poster from "../../assets/images/kubi-screenshot.webp";
 import video from "../../assets/video/kubi-intro.mp4";
 
 const Video = () => {

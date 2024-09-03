@@ -1,5 +1,5 @@
 import "./About.scss";
-import dev from "../../assets/images/Louis.jpg";
+import dev from "../../assets/images/Louis.webp";
 import Card from "../card/Card";
 import fileUrl from "../../assets/resume/OMOGBARE_LOUIS_EKPENGA_Resume.pdf";
 
