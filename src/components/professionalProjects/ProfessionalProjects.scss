@@ -1,0 +1,21 @@
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/typography" as *;
+@use "../../style/partials/variables" as *;
+
+.professionalProjects {
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include desktop {
+      padding-top: 10%;
+    }
+  }
+  &__title {
+    text-align: center;
+  }
+  &__subtitle {
+    @include sub-header;
+  }
+}
